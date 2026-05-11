@@ -1,0 +1,56 @@
+Pattern Mining Report — 20260511_032213
+TransactionDB : 172 transactions  / 61 unique items
+
+[APRIORI]
+  Elapsed           : 0.022s
+  Frequent itemsets : 333
+  Rules generated   : 879
+
+  Top 20 rules by lift:
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42 → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36 → EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  COMP:libvirt_imagecache|EVT:E42 → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  COMP:libvirt_imagecache|EVT:E36 → EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42 → COMP:libvirt_imagecache|EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36 → COMP:libvirt_imagecache|EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42|FLAG:FAILURE → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36|FLAG:FAILURE → EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42 → EVT:E36|FLAG:FAILURE
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36 → EVT:E42|FLAG:FAILURE
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36|HOUR:00 → EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42|HOUR:00 → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36 → EVT:E42|HOUR:00
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42 → EVT:E36|HOUR:00
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42|LEVEL:INFO → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36|LEVEL:INFO → EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42 → EVT:E36|LEVEL:INFO
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36 → EVT:E42|LEVEL:INFO
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42|LEVEL:WARNING → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36|LEVEL:WARNING → EVT:E42
+
+[FPGROWTH]
+  Elapsed           : 0.010s
+  Frequent itemsets : 333
+  Rules generated   : 879
+
+  Top 20 rules by lift:
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42 → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36 → EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42|FLAG:FAILURE → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36|FLAG:FAILURE → EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42 → EVT:E36|FLAG:FAILURE
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36 → EVT:E42|FLAG:FAILURE
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42|LEVEL:WARNING → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36|LEVEL:WARNING → EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42 → EVT:E36|LEVEL:WARNING
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36 → EVT:E42|LEVEL:WARNING
+    sup=0.174  conf=1.000  lift=5.73  COMP:libvirt_imagecache|EVT:E36 → EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  COMP:libvirt_imagecache|EVT:E42 → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36 → COMP:libvirt_imagecache|EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42 → COMP:libvirt_imagecache|EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36|HOUR:00 → EVT:E42
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42|HOUR:00 → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36 → EVT:E42|HOUR:00
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42 → EVT:E36|HOUR:00
+    sup=0.174  conf=1.000  lift=5.73  EVT:E42|LEVEL:INFO → EVT:E36
+    sup=0.174  conf=1.000  lift=5.73  EVT:E36|LEVEL:INFO → EVT:E42
