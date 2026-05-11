@@ -9,7 +9,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import List, Optional, Iterator
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import OPENSTACK_LOG_PATTERN, FAILURE_LEVELS, CRITICAL_COMPONENTS
 
 logger = logging.getLogger(__name__)
@@ -170,12 +170,11 @@ class OpenStackLogParser:
 
     def _parse_csv_row(self, row: dict) -> Optional[LogEntry]:
         try:
-            line_id = int(row.get("LineId", 0))
-            month   = row.get("Month", "Jan")
-            date    = row.get("Date", "1")
+            line_id  = int(row.get("LineId", 0))
+            date_str = row.get("Date", "")
             time_str = row.get("Time", "00:00:00")
-            # Reconstruct a parseable timestamp string
-            ts = self._parse_timestamp(f"2016-{self._month_num(month):02d}-{int(date):02d} {time_str}")
+            # Date column is already YYYY-MM-DD; Time is HH:MM:SS[.ffffff]
+            ts = self._parse_timestamp(f"{date_str} {time_str}")
 
             level     = (row.get("Level", row.get("Levelname", "INFO")) or "INFO").upper()
             component = row.get("Component", "unknown")

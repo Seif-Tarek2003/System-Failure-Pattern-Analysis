@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from typing import Dict, FrozenSet, List, Optional, Tuple
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from config import (
     TIME_WINDOW_SECONDS,
@@ -15,7 +15,7 @@ from config import (
     MIN_EVENTS_PER_WINDOW,
     FAILURE_LEVELS,
 )
-from src.log_parser import LogEntry
+from log_parser import LogEntry
 
 logger = logging.getLogger(__name__)
 
