@@ -35,16 +35,16 @@ CRITICAL_COMPONENTS = {
 }
 
 # Transaction Building
-TIME_WINDOW_SECONDS    = 5      # was 60 — 60s → 15 near-identical windows → lift≈1.0
+TIME_WINDOW_SECONDS    = 65      # was 60 — 60s → 15 near-identical windows → lift≈1.0
                                 # 5s  → ~177 windows of ~11 entries → real item variance
-SESSION_WINDOW_SECONDS = 300    
-MIN_EVENTS_PER_WINDOW  = 2        
+SESSION_WINDOW_SECONDS = 270    
+MIN_EVENTS_PER_WINDOW  = 6        
 
 # Apriori / FP-Growth
-MIN_SUPPORT    = 0.15    # failure events occur in ~18% of windows; 0.15 captures them
+MIN_SUPPORT    = 0.11    # failure events occur in ~18% of windows; 0.15 captures them
 MIN_CONFIDENCE = 0.5     
-MIN_LIFT       = 1.05    # was 1.20 — dense log data rarely exceeds 1.2; 1.05 is meaningful
-MAX_ITEMSET_LEN = 3      
+MIN_LIFT       = 2.65    # was 1.20 — dense log data rarely exceeds 1.2; 1.05 is meaningful
+MAX_ITEMSET_LEN = 2      
 MAX_FREQUENT_ITEMSETS = 50_000  # hard cap: skip rule generation above this count
 
 # Failure Detection

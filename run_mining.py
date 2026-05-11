@@ -35,6 +35,27 @@ import logging
 from typing import Dict, Optional
 
 import sys, os
+
+# ── Windows UTF-8 fix ──────────────────────────────────────────────────────────
+# mining_base.print_report() uses Unicode box-drawing chars (─ U+2500),
+# arrows (→ U+2192), and ≥ (U+2265).  On Windows the default console
+# codec is cp1252 which cannot encode any of these, causing:
+#   UnicodeEncodeError: 'charmap' codec can't encode character …
+#
+# Fix: reconfigure stdout/stderr to UTF-8 with errors='replace' so that
+# any un-encodable character is silently swapped for '?' instead of
+# crashing the process.  This is safe on all platforms.
+#
+# Two-pronged approach:
+#   1. sys.stdout.reconfigure()  — works for direct `python run_mining.py` calls
+#   2. PYTHONIOENCODING env-var  — set by dashboard.py when spawning this as a
+#      subprocess (so the reconfigure below is belt-and-suspenders for CLI use)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+# ──────────────────────────────────────────────────────────────────────────────
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from config import MIN_SUPPORT, MIN_CONFIDENCE, MIN_LIFT, MAX_ITEMSET_LEN
@@ -123,7 +144,7 @@ def _print_comparison(results: Dict[str, MiningResult]) -> None:
     if ap is None or fp is None:
         return
 
-    sep = "─" * 60
+    sep = "-" * 60
     print(f"\n{sep}")
     print("  COMPARISON: Apriori  vs  FP-Growth")
     print(sep)
@@ -137,14 +158,14 @@ def _print_comparison(results: Dict[str, MiningResult]) -> None:
 
     col_w = 22
     print(f"  {'Metric':<{col_w}}  {'Apriori':>12}  {'FP-Growth':>12}")
-    print(f"  {'─'*col_w}  {'─'*12}  {'─'*12}")
+    print(f"  {'-'*col_w}  {'-'*12}  {'-'*12}")
     for label, a_val, f_val in rows:
         print(f"  {label:<{col_w}}  {str(a_val):>12}  {str(f_val):>12}")
 
     # Speed-up
     if ap.elapsed_seconds > 0:
         speedup = ap.elapsed_seconds / max(fp.elapsed_seconds, 1e-9)
-        print(f"\n  FP-Growth speed-up over Apriori: {speedup:.1f}×")
+        print(f"\n  FP-Growth speed-up over Apriori: {speedup:.1f}x")
 
     # Rule overlap
     if ap.n_rules > 0 and fp.n_rules > 0:
@@ -173,7 +194,7 @@ if __name__ == "__main__":
 
     logging.basicConfig(
         level  = logging.INFO,
-        format = "%(asctime)s  %(levelname)-8s  %(name)s — %(message)s",
+        format = "%(asctime)s  %(levelname)-8s  %(name)s -- %(message)s",
     )
 
     ap = argparse.ArgumentParser(

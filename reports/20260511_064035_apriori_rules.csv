@@ -1,0 +1,21 @@
+antecedents,consequents,antecedent support,consequent support,support,confidence,lift,representativity,leverage,conviction,zhangs_metric,jaccard,certainty,kulczynski
+COMP:compute_resource_tracker,EVT:E28,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E28,COMP:compute_resource_tracker,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E30,COMP:compute_resource_tracker,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+COMP:compute_resource_tracker,EVT:E30,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+COMP:compute_resource_tracker,EVT:E32,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E32,COMP:compute_resource_tracker,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E41,COMP:compute_resource_tracker,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+COMP:compute_resource_tracker,EVT:E41,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E30,EVT:E28,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E28,EVT:E30,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E28,EVT:E32,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E32,EVT:E28,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E41,EVT:E28,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E28,EVT:E41,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E30,EVT:E32,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E32,EVT:E30,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E41,EVT:E30,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E30,EVT:E41,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E41,EVT:E32,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0
+EVT:E32,EVT:E41,0.5,0.5,0.5,1.0,2.0,1.0,0.25,inf,1.0,1.0,1.0,1.0

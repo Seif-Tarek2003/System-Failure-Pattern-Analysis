@@ -1,0 +1,56 @@
+Pattern Mining Report — 20260511_064035
+TransactionDB : 30 transactions  / 61 unique items
+
+[APRIORI]
+  Elapsed           : 0.023s
+  Frequent itemsets : 1556
+  Rules generated   : 20
+
+  Top 20 rules by lift:
+    sup=0.500  conf=1.000  lift=2.00  COMP:compute_resource_tracker → EVT:E28
+    sup=0.500  conf=1.000  lift=2.00  EVT:E28 → COMP:compute_resource_tracker
+    sup=0.500  conf=1.000  lift=2.00  EVT:E30 → COMP:compute_resource_tracker
+    sup=0.500  conf=1.000  lift=2.00  COMP:compute_resource_tracker → EVT:E30
+    sup=0.500  conf=1.000  lift=2.00  COMP:compute_resource_tracker → EVT:E32
+    sup=0.500  conf=1.000  lift=2.00  EVT:E32 → COMP:compute_resource_tracker
+    sup=0.500  conf=1.000  lift=2.00  EVT:E41 → COMP:compute_resource_tracker
+    sup=0.500  conf=1.000  lift=2.00  COMP:compute_resource_tracker → EVT:E41
+    sup=0.500  conf=1.000  lift=2.00  EVT:E30 → EVT:E28
+    sup=0.500  conf=1.000  lift=2.00  EVT:E28 → EVT:E30
+    sup=0.500  conf=1.000  lift=2.00  EVT:E28 → EVT:E32
+    sup=0.500  conf=1.000  lift=2.00  EVT:E32 → EVT:E28
+    sup=0.500  conf=1.000  lift=2.00  EVT:E41 → EVT:E28
+    sup=0.500  conf=1.000  lift=2.00  EVT:E28 → EVT:E41
+    sup=0.500  conf=1.000  lift=2.00  EVT:E30 → EVT:E32
+    sup=0.500  conf=1.000  lift=2.00  EVT:E32 → EVT:E30
+    sup=0.500  conf=1.000  lift=2.00  EVT:E41 → EVT:E30
+    sup=0.500  conf=1.000  lift=2.00  EVT:E30 → EVT:E41
+    sup=0.500  conf=1.000  lift=2.00  EVT:E41 → EVT:E32
+    sup=0.500  conf=1.000  lift=2.00  EVT:E32 → EVT:E41
+
+[FPGROWTH]
+  Elapsed           : 0.127s
+  Frequent itemsets : 1556
+  Rules generated   : 20
+
+  Top 20 rules by lift:
+    sup=0.500  conf=1.000  lift=2.00  EVT:E41 → EVT:E30
+    sup=0.500  conf=1.000  lift=2.00  EVT:E30 → EVT:E41
+    sup=0.500  conf=1.000  lift=2.00  EVT:E41 → EVT:E32
+    sup=0.500  conf=1.000  lift=2.00  EVT:E32 → EVT:E41
+    sup=0.500  conf=1.000  lift=2.00  EVT:E30 → EVT:E32
+    sup=0.500  conf=1.000  lift=2.00  EVT:E32 → EVT:E30
+    sup=0.500  conf=1.000  lift=2.00  COMP:compute_resource_tracker → EVT:E32
+    sup=0.500  conf=1.000  lift=2.00  EVT:E32 → COMP:compute_resource_tracker
+    sup=0.500  conf=1.000  lift=2.00  EVT:E41 → COMP:compute_resource_tracker
+    sup=0.500  conf=1.000  lift=2.00  COMP:compute_resource_tracker → EVT:E41
+    sup=0.500  conf=1.000  lift=2.00  EVT:E30 → COMP:compute_resource_tracker
+    sup=0.500  conf=1.000  lift=2.00  COMP:compute_resource_tracker → EVT:E30
+    sup=0.500  conf=1.000  lift=2.00  COMP:compute_resource_tracker → EVT:E28
+    sup=0.500  conf=1.000  lift=2.00  EVT:E28 → COMP:compute_resource_tracker
+    sup=0.500  conf=1.000  lift=2.00  EVT:E28 → EVT:E32
+    sup=0.500  conf=1.000  lift=2.00  EVT:E32 → EVT:E28
+    sup=0.500  conf=1.000  lift=2.00  EVT:E41 → EVT:E28
+    sup=0.500  conf=1.000  lift=2.00  EVT:E28 → EVT:E41
+    sup=0.500  conf=1.000  lift=2.00  EVT:E30 → EVT:E28
+    sup=0.500  conf=1.000  lift=2.00  EVT:E28 → EVT:E30

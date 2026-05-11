@@ -1,0 +1,56 @@
+Pattern Mining Report — 20260511_064108
+TransactionDB : 89 transactions  / 61 unique items
+
+[APRIORI]
+  Elapsed           : 0.013s
+  Frequent itemsets : 565
+  Rules generated   : 236
+
+  Top 20 rules by lift:
+    sup=0.236  conf=1.000  lift=4.24  EVT:E1 → COMP:compute_claims
+    sup=0.236  conf=1.000  lift=4.24  COMP:compute_claims → EVT:E1
+    sup=0.236  conf=1.000  lift=4.24  EVT:E10 → COMP:compute_claims
+    sup=0.236  conf=1.000  lift=4.24  COMP:compute_claims → EVT:E10
+    sup=0.236  conf=1.000  lift=4.24  COMP:compute_claims → EVT:E16
+    sup=0.236  conf=1.000  lift=4.24  EVT:E16 → COMP:compute_claims
+    sup=0.236  conf=1.000  lift=4.24  EVT:E17 → COMP:compute_claims
+    sup=0.236  conf=1.000  lift=4.24  COMP:compute_claims → EVT:E17
+    sup=0.236  conf=1.000  lift=4.24  EVT:E18 → COMP:compute_claims
+    sup=0.236  conf=1.000  lift=4.24  COMP:compute_claims → EVT:E18
+    sup=0.236  conf=1.000  lift=4.24  EVT:E19 → COMP:compute_claims
+    sup=0.236  conf=1.000  lift=4.24  COMP:compute_claims → EVT:E19
+    sup=0.236  conf=1.000  lift=4.24  COMP:compute_claims → EVT:E2
+    sup=0.236  conf=1.000  lift=4.24  EVT:E2 → COMP:compute_claims
+    sup=0.236  conf=1.000  lift=4.24  COMP:compute_claims → EVT:E3
+    sup=0.236  conf=1.000  lift=4.24  EVT:E3 → COMP:compute_claims
+    sup=0.236  conf=1.000  lift=4.24  EVT:E6 → COMP:compute_claims
+    sup=0.236  conf=1.000  lift=4.24  COMP:compute_claims → EVT:E6
+    sup=0.236  conf=1.000  lift=4.24  COMP:openstack_wsgi → EVT:E33
+    sup=0.236  conf=1.000  lift=4.24  EVT:E33 → COMP:openstack_wsgi
+
+[FPGROWTH]
+  Elapsed           : 0.015s
+  Frequent itemsets : 565
+  Rules generated   : 236
+
+  Top 20 rules by lift:
+    sup=0.236  conf=1.000  lift=4.24  EVT:E5 → EVT:E4
+    sup=0.236  conf=1.000  lift=4.24  EVT:E4 → EVT:E5
+    sup=0.236  conf=1.000  lift=4.24  EVT:E4 → EVT:E13
+    sup=0.236  conf=1.000  lift=4.24  EVT:E13 → EVT:E4
+    sup=0.236  conf=1.000  lift=4.24  EVT:E5 → EVT:E13
+    sup=0.236  conf=1.000  lift=4.24  EVT:E13 → EVT:E5
+    sup=0.236  conf=1.000  lift=4.24  EVT:E14 → EVT:E13
+    sup=0.236  conf=1.000  lift=4.24  EVT:E13 → EVT:E14
+    sup=0.236  conf=1.000  lift=4.24  EVT:E14 → EVT:E4
+    sup=0.236  conf=1.000  lift=4.24  EVT:E4 → EVT:E14
+    sup=0.236  conf=1.000  lift=4.24  EVT:E5 → EVT:E14
+    sup=0.236  conf=1.000  lift=4.24  EVT:E14 → EVT:E5
+    sup=0.236  conf=1.000  lift=4.24  KW:exception → EVT:E33
+    sup=0.236  conf=1.000  lift=4.24  EVT:E33 → KW:exception
+    sup=0.236  conf=1.000  lift=4.24  COMP:openstack_wsgi → EVT:E33
+    sup=0.236  conf=1.000  lift=4.24  EVT:E33 → COMP:openstack_wsgi
+    sup=0.236  conf=1.000  lift=4.24  KW:exception → COMP:openstack_wsgi
+    sup=0.236  conf=1.000  lift=4.24  COMP:openstack_wsgi → KW:exception
+    sup=0.236  conf=1.000  lift=4.24  EVT:E6 → EVT:E18
+    sup=0.236  conf=1.000  lift=4.24  EVT:E18 → EVT:E6

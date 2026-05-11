@@ -1,0 +1,20 @@
+Pattern Mining Report — 20260511_064252
+TransactionDB : 18 transactions  / 61 unique items
+
+[APRIORI]
+  Elapsed           : 0.019s
+  Frequent itemsets : 1646
+  Rules generated   : 2
+
+  Top 2 rules by lift:
+    sup=0.278  conf=1.000  lift=2.57  EVT:E40 → COMP:scheduler_host_manager
+    sup=0.278  conf=0.714  lift=2.57  COMP:scheduler_host_manager → EVT:E40
+
+[FPGROWTH]
+  Elapsed           : 0.018s
+  Frequent itemsets : 1646
+  Rules generated   : 2
+
+  Top 2 rules by lift:
+    sup=0.278  conf=1.000  lift=2.57  EVT:E40 → COMP:scheduler_host_manager
+    sup=0.278  conf=0.714  lift=2.57  COMP:scheduler_host_manager → EVT:E40

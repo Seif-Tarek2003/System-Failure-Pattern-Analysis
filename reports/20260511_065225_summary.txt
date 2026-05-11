@@ -1,0 +1,8 @@
+Pattern Mining Report — 20260511_065225
+TransactionDB : 42 transactions  / 59 unique items
+
+[FPGROWTH]
+  Elapsed           : 0.014s
+  Frequent itemsets : 595
+  Rules generated   : 0
+
