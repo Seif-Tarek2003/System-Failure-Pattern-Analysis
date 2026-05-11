@@ -1,0 +1,56 @@
+Pattern Mining Report — 20260511_021906
+TransactionDB : 172 transactions  / 61 unique items
+
+[APRIORI]
+  Elapsed           : 0.097s
+  Frequent itemsets : 156
+  Rules generated   : 429
+
+  Top 20 rules by lift:
+    sup=0.477  conf=1.000  lift=2.10  EVT:E27 → EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  EVT:E34 → EVT:E27
+    sup=0.477  conf=1.000  lift=2.10  EVT:E27 → EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  EVT:E35 → EVT:E27
+    sup=0.477  conf=1.000  lift=2.10  EVT:E35 → EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  EVT:E34 → EVT:E35
+    sup=0.390  conf=1.000  lift=2.10  COMP:compute_manager|EVT:E27 → EVT:E34
+    sup=0.390  conf=1.000  lift=2.10  COMP:compute_manager|EVT:E34 → EVT:E27
+    sup=0.390  conf=1.000  lift=2.10  COMP:compute_manager|EVT:E27 → EVT:E35
+    sup=0.390  conf=1.000  lift=2.10  COMP:compute_manager|EVT:E35 → EVT:E27
+    sup=0.390  conf=1.000  lift=2.10  COMP:compute_manager|EVT:E35 → EVT:E34
+    sup=0.390  conf=1.000  lift=2.10  COMP:compute_manager|EVT:E34 → EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  COMP:libvirt_imagecache|EVT:E27 → EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  COMP:libvirt_imagecache|EVT:E34 → EVT:E27
+    sup=0.477  conf=1.000  lift=2.10  EVT:E27 → COMP:libvirt_imagecache|EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  EVT:E34 → COMP:libvirt_imagecache|EVT:E27
+    sup=0.477  conf=1.000  lift=2.10  COMP:libvirt_imagecache|EVT:E35 → EVT:E27
+    sup=0.477  conf=1.000  lift=2.10  COMP:libvirt_imagecache|EVT:E27 → EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  EVT:E35 → COMP:libvirt_imagecache|EVT:E27
+    sup=0.477  conf=1.000  lift=2.10  EVT:E27 → COMP:libvirt_imagecache|EVT:E35
+
+[FPGROWTH]
+  Elapsed           : 0.022s
+  Frequent itemsets : 156
+  Rules generated   : 429
+
+  Top 20 rules by lift:
+    sup=0.477  conf=1.000  lift=2.10  EVT:E35 → EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  EVT:E34 → EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  COMP:libvirt_imagecache|EVT:E35 → EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  COMP:libvirt_imagecache|EVT:E34 → EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  EVT:E35 → COMP:libvirt_imagecache|EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  EVT:E34 → COMP:libvirt_imagecache|EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  EVT:E25|EVT:E35 → EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  EVT:E25|EVT:E34 → EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  EVT:E35 → EVT:E25|EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  EVT:E34 → EVT:E25|EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  COMP:wsgi_server|EVT:E35 → EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  COMP:wsgi_server|EVT:E34 → EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  EVT:E35 → COMP:wsgi_server|EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  EVT:E34 → COMP:wsgi_server|EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  EVT:E35|HOUR:00 → EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  EVT:E34|HOUR:00 → EVT:E35
+    sup=0.477  conf=1.000  lift=2.10  EVT:E35 → EVT:E34|HOUR:00
+    sup=0.477  conf=1.000  lift=2.10  EVT:E34 → EVT:E35|HOUR:00
+    sup=0.477  conf=1.000  lift=2.10  EVT:E35|LEVEL:INFO → EVT:E34
+    sup=0.477  conf=1.000  lift=2.10  EVT:E34|LEVEL:INFO → EVT:E35
